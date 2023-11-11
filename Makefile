@@ -1,7 +1,7 @@
 MODULE_big = pg_hook_minimal
 OBJS = pg_hook_minimal.o
 ifdef USE_PGXS
-#PG_CONFIG = pg_config # TODO try this with multipass setup? explain how i fixed if not
+# note that is hardcoded for the default multipass VM dir structure and install location
 PG_CONFIG = /usr/local/pgsql/bin/pg_config
 PGXS := $(shell $(PG_CONFIG) --pgxs)
 include $(PGXS)
