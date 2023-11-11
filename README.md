@@ -10,7 +10,7 @@ The ways I find available hooks are:
 
 1. Read these unofficial hook docs: https://github.com/taminomara/psql-hooks.
 2. Search the [contrib](https://github.com/postgres/postgres/tree/master/contrib) directory in the postgresql codebase for `_hook`.
-3. Search the whole postgresql [codebase](https://github.com/postgres/postgres/tree/master) for `_hook` or the relevant component of interest to you.
+3. Search the whole postgresql [codebase](https://github.com/postgres/postgres/tree/master) (or the relevant component of interest to you) for `_hook`.
 
 ## Development
 
