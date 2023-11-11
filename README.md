@@ -14,7 +14,7 @@ The ways I find available hooks are:
 
 ## Development
 
-Below are some notes about you can run Postgres locally on an Ubuntu VM, develop, and debug it.
+Below are some notes about how you can run Postgres locally on an Ubuntu VM, develop, and debug it.
 
 ### Build Postgres in an Ubuntu VM via Multipass
 
