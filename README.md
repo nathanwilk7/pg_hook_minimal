@@ -60,6 +60,8 @@ You've got PostgreSQL running in an Ubuntu VM.
 
 Now we're going to clone this minimal hook and get it installed into PostgreSQL.
 
+Note that if you're not very comfortable with C/Makefiles/etc, you may want to get started by getting the commands below working without changing any names and using the default hook name of `pg_hook_minimal`, then you can go back and change the names per the instructions below.
+
 ```
 # Open a new terminal and get a shell into the VM
 multipass shell yourvmnamehere
@@ -80,10 +82,10 @@ Compile and install the hook:
 make USE_PGXS=1 && sudo make USE_PGXS=1 install
 ```
 
-Restart the postgres server and check for the relevant log:
+Restart the postgres server and check for the loaded hook log:
 ```
 /usr/local/pgsql/bin/pg_ctl -D ~/pgdata -l logfile restart
-# check that `LOG:  Loaded pg_foo ...` was logged
+# check that `LOG:  Loaded hook pg_foo ...` was logged
 cat ~/postgresql/logfile
 ```
 
@@ -123,9 +125,15 @@ Repeat.
 - [Hooks in PostgreSQL](https://wiki.postgresql.org/images/e/e3/Hooks_in_postgresql.pdf)
 - [Getting a hook on PostgreSQL extensibility](https://archive.fosdem.org/2021/schedule/event/postgresql_extensibility/attachments/slides/4348/export/events/attachments/postgresql_extensibility/slides/4348/fosdem21_postgres_extensibility.pdf)
 - [Using PostgreSQL Hooks](https://www.endpointdev.com/blog/2010/05/using-postgresql-hooks/)
+- [Babelfish PostreSQL Hooks](https://babelfishpg.org/docs/internals/postgresql-hooks/)
+- [Hooks: The secret feature powering the Postgres ecosystem](https://devpress.csdn.net/postgresql/62f4d9037e66823466188f42.html)
+- [pg_hint_plan](https://github.com/ossc-db/pg_hint_plan)
+- [pg_tle](https://github.com/aws/pg_tle/tree/main)
+- [pg_ivm](https://github.com/sraoss/pg_ivm)
 
 ## Future
 
+- One liner to easily replace hook name with your own (or template/cookiecutter)
 - Testing
 - Hot reloading of hooks
 - Local filesystem/IDE integration
