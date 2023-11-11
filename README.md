@@ -34,7 +34,7 @@ sudo apt install gcc g++ libreadline-dev zlib1g zlib1g-dev bison flex make gdb p
 ```
 
 ```shell
-# clone postgresql (I used commit `73635b6d63b5e12ea5f8b44a0154440654819820` from `Tue Oct 31 16:42:08 2023 +1300`)
+# clone postgresql (I used commit `b7f315c9d7d839dda847b10d170ffec7c3f4dbba` from `Fri Nov 10 22:46:46 2023 +0200`)
 git clone https://git.postgresql.org/git/postgresql.git
 cd postgresql
 ```
